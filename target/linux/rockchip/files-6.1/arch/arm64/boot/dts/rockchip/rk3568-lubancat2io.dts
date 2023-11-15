@@ -12,7 +12,7 @@
 #include "rk3568-lubancat.dtsi"
 
 / {
-    model = "EmbedFire LubanCat 2io";
+    model = "EmbedFire LubanCat 2IO";
     compatible = "embedfire,lubancat2io", "rockchip,rk3568";
 
 	aliases {
