@@ -74,3 +74,13 @@ define Device/embedfire_lubancat2n
   DEVICE_PACKAGES := kmod-r8125 kmod-ata-ahci kmod-ata-ahci-platform kmod-ata-core
 endef
 TARGET_DEVICES += embedfire_lubancat2n
+
+define Device/embedfire_lubancat2io
+  DEVICE_VENDOR := EmbedFire
+  DEVICE_MODEL := LubanCat 2IO
+  SOC := rk3568
+  UBOOT_DEVICE_NAME := lubancat2io-rk3568
+  IMAGE/sysupgrade.img.gz := boot-common | boot-script rk356x | pine64-img | gzip | append-metadata
+  DEVICE_PACKAGES := kmod-r8125 kmod-ata-ahci kmod-ata-ahci-platform kmod-ata-core
+endef
+TARGET_DEVICES += embedfire_lubancat2io

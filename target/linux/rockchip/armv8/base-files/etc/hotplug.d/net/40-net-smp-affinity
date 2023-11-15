@@ -97,6 +97,7 @@ friendlyarm,nanopi-r4s)
 	;;
 embedfire,lubancat1n|\
 embedfire,lubancat2|\
+embedfire,lubancat2io|\
 firefly,rk3568-roc-pc)
 	set_interface_core "0-1" "eth0"
 	set_interface_core "2-3" "eth1"

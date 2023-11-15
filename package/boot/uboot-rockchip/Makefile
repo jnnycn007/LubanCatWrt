@@ -156,6 +156,17 @@ define U-Boot/lubancat2n-rk3568
   DDR:=rk3568_ddr_1560MHz_v1.13.bin
 endef
 
+define U-Boot/lubancat2io-rk3568
+  BUILD_SUBTARGET:=armv8
+  NAME:=LubanCat2IO
+  BUILD_DEVICES:= \
+    embedfire_lubancat2io
+  DEPENDS:=+PACKAGE_u-boot-lubancat2io-rk3568:arm-trusted-firmware-rk3568
+  PKG_BUILD_DEPENDS:=arm-trusted-firmware-rockchip-vendor
+  ATF:=rk3568_bl31_v1.28.elf
+  DDR:=rk3568_ddr_1560MHz_v1.13.bin
+endef
+
 UBOOT_TARGETS := \
   doornet1-rk3328 \
   doornet2-rk3399 \
@@ -164,6 +175,7 @@ UBOOT_TARGETS := \
   lubancat1n-rk3566 \
   lubancat2-rk3568 \
   lubancat2n-rk3568 \
+  lubancat2io-rk3568 \
   nanopi-r2s-rk3328 \
   nanopi-r4s-rk3399 \
   rock-3a-rk3568 \
