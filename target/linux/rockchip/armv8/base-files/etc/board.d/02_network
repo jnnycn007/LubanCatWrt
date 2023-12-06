@@ -21,6 +21,9 @@ rockchip_setup_interfaces()
 	embedfire,lubancat1)
 		ucidef_set_interfaces_lan_wan 'eth0' 'wwan0'
 		;;
+	embedfire,lubancat-zero-n)
+		ucidef_set_interfaces_lan 'eth0'
+		;;
 	embedfire,lubancat2n)
 		ucidef_set_interfaces_lan_wan "eth1 eth2 eth3" "eth0"
 		;;

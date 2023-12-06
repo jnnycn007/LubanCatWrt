@@ -42,7 +42,7 @@ Signed-off-by: Mark Brown <broonie@kernel.org>
  	map->format.reg_bytes = DIV_ROUND_UP(config->reg_bits, 8);
  	map->format.pad_bytes = config->pad_bits / 8;
  	map->format.reg_downshift = config->reg_downshift;
-@@ -1736,6 +1738,7 @@ static int _regmap_raw_write_impl(struct
+@@ -1738,6 +1740,7 @@ static int _regmap_raw_write_impl(struct
  			return ret;
  	}
  
@@ -50,7 +50,7 @@ Signed-off-by: Mark Brown <broonie@kernel.org>
  	reg >>= map->format.reg_downshift;
  	map->format.format_reg(map->work_buf, reg, map->reg_shift);
  	regmap_set_work_buf_flag_mask(map, map->format.reg_bytes,
-@@ -1907,6 +1910,7 @@ static int _regmap_bus_formatted_write(v
+@@ -1909,6 +1912,7 @@ static int _regmap_bus_formatted_write(v
  			return ret;
  	}
  

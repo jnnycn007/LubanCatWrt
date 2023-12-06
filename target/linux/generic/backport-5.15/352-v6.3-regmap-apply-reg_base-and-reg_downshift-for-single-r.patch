@@ -28,7 +28,7 @@ Signed-off-by: Mark Brown <broonie@kernel.org>
 
 --- a/drivers/base/regmap/regmap.c
 +++ b/drivers/base/regmap/regmap.c
-@@ -1929,6 +1929,8 @@ static int _regmap_bus_reg_write(void *c
+@@ -1931,6 +1931,8 @@ static int _regmap_bus_reg_write(void *c
  {
  	struct regmap *map = context;
  
