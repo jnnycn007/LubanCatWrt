@@ -98,7 +98,7 @@ define KernelPackage/ath/config
 		bool "Atheros wireless debugging"
 		help
 		  Say Y, if you want to debug atheros wireless drivers.
-		  Only ath9k & ath10k make use of this.
+		  Only ath9k & ath10k & ath11k make use of this.
 
 	config PACKAGE_ATH_DFS
 		bool "Enable DFS support"
@@ -287,6 +287,7 @@ define KernelPackage/ath10k/config
 
        config ATH10K_THERMAL
                bool "Enable thermal sensors and throttling support"
+               default y
                depends on PACKAGE_kmod-ath10k || PACKAGE_kmod-ath10k-smallbuffers
 
 endef
