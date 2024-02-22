@@ -1,0 +1,29 @@
+From 190d2a3d5a6522a61a2a6b2f3980fbed81cd049a Mon Sep 17 00:00:00 2001
+From: DHDAXCW <lasstp5011@gmail.com>
+Date: Thu, 22 Feb 2024 08:49:34 +0800
+Subject: [PATCH] wode
+
+---
+ arch/arm/dts/Makefile | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/arch/arm/dts/Makefile b/arch/arm/dts/Makefile
+index 92118411..c401b767 100644
+--- a/arch/arm/dts/Makefile
++++ b/arch/arm/dts/Makefile
+@@ -167,6 +167,12 @@ dtb-$(CONFIG_ROCKCHIP_RK3399) += \
+ 
+ dtb-$(CONFIG_ROCKCHIP_RK3568) += \
+ 	rk3568-evb.dtb \
++	rk3566-lubancat-zero-n.dtb \
++	rk3566-lubancat1.dtb \
++	rk3566-lubancat1n.dtb \
++	rk3568-lubancat2.dtb \
++	rk3568-lubancat2n.dtb \
++	rk3568-lubancat2io.dtb \
+ 	rk3566-quartz64-a.dtb \
+ 	rk3568-rock-3a.dtb
+ 
+-- 
+2.34.1
+

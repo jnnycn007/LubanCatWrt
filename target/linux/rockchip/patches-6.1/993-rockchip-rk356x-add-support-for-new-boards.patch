@@ -1,0 +1,30 @@
+From b4c1701740668201f75e93a04f92e5e5975ad87e Mon Sep 17 00:00:00 2001
+From: DHDAXCW <lasstp5011@gmail.com>
+Date: Thu, 22 Feb 2024 14:52:34 +0800
+Subject: [PATCH] wode
+
+---
+ arch/arm64/boot/dts/rockchip/Makefile | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+--- a/arch/arm64/boot/dts/rockchip/Makefile
++++ b/arch/arm64/boot/dts/rockchip/Makefile
+@@ -86,11 +86,18 @@ dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3566-so
+ dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3566-soquartz-model-a.dtb
+ dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3566-box-demo.dtb
+ dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3566-lubancat-1.dtb
++dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3399-doornet2.dtb
++dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3566-lubancat1.dtb
++dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3566-lubancat1n.dtb
++dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3566-lubancat-zero-n.dtb
+ dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3568-bpi-r2-pro.dtb
+ dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3568-evb1-v10.dtb
+ dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3568-fastrhino-r66s.dtb
+ dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3568-fastrhino-r68s.dtb
+ dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3568-lubancat-2.dtb
++dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3568-lubancat2.dtb
++dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3568-lubancat2n.dtb
++dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3568-lubancat2io.dtb
+ dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3568-nanopi-r5c.dtb
+ dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3568-nanopi-r5s.dtb
+ dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3568-odroid-m1.dtb

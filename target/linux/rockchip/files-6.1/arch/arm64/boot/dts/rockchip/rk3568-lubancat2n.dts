@@ -18,8 +18,6 @@
 	aliases {
 		ethernet0 = &gmac0;
 		ethernet1 = &gmac1;
-		ethernet2 = &rtl8125_2;
-		ethernet3 = &rtl8125_1;
 		mmc0 = &sdmmc0;
 		mmc1 = &sdhci;
 	};
@@ -547,20 +545,6 @@
 	reset-gpios = <&gpio2 RK_PD5 GPIO_ACTIVE_HIGH>;
 	vpcie3v3-supply = <&vcc3v3_pcie>;
 	status = "okay";
-
-	pcie@10 {
-		reg = <0x00100000 0 0 0 0>;
-		#address-cells = <3>;
-		#size-cells = <2>;
-
-		// ETH3 2.5G
-		rtl8125_1: pcie-eth@10,0 {
-			compatible = "pci10ec,8125";
-			reg = <0x000000 0 0 0 0>;
-
-			realtek,led-data = <0x4078>;
-		};
-	};
 };
 
 &pcie3x2 {
@@ -568,20 +552,6 @@
 	reset-gpios = <&gpio2 RK_PD4 GPIO_ACTIVE_HIGH>;
 	vpcie3v3-supply = <&vcc3v3_pcie>;
 	status = "okay";
-
-	// ETH2 2.5G
-	pcie@20 {
-		reg = <0x00200000 0 0 0 0>;
-		#address-cells = <3>;
-		#size-cells = <2>;
-
-		rtl8125_2: pcie-eth@20,0 {
-			compatible = "pci10ec,8125";
-			reg = <0x000000 0 0 0 0>;
-
-			realtek,led-data = <0x4078>;
-		};
-	};
 };
 
 &pcie2x1 {
@@ -658,18 +628,13 @@
 };
 
 &sdmmc0 {
-	max-frequency = <150000000>;
-	no-sdio;
-	no-mmc;
 	bus-width = <4>;
-	cap-mmc-highspeed;
 	cap-sd-highspeed;
 	disable-wp;
-	sd-uhs-sdr104;
-	vmmc-supply = <&vcc3v3_sd>;
-	vqmmc-supply = <&vccio_sd>;
 	pinctrl-names = "default";
 	pinctrl-0 = <&sdmmc0_bus4 &sdmmc0_clk &sdmmc0_cmd &sdmmc0_det>;
+	vmmc-supply = <&vcc3v3_sd>;
+	vqmmc-supply = <&vccio_sd>;
 	status = "okay";
 };
 
